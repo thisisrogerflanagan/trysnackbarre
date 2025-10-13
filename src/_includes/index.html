@@ -8,10 +8,13 @@
 
   <body class="{{ webpage }}">
     <div class="site">
+      {% include "header.html" %}
       <div class="page">
-        {% include "header.html" %} {% include "introduction.html" %} {% include "hero.html" %} {% include "spotlight-one.html" %} {% include "spotlight-two.html" %} {% include "spotlight-three.html"
-        %} {% include "spotlight-four.html" %} {% include "features.html" %} {% include "ios-qr.html" %} {% include "footer.html" %}
+        {% include "introduction.html" %} {% include "hero.html" %} {% include "spotlight-one.html" %} {% include "spotlight-two.html" %} {% include "spotlight-three.html" %} {% include
+        "spotlight-four.html" %} {% include "features.html" %} {% include "ios-qr.html" %} {% include "footer.html" %}
       </div>
     </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </body>
 </html>
