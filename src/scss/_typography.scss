@@ -14,9 +14,18 @@
 
 h1 {
   @include font-face.GT;
+  color: tokens.$black;
   font-size: tokens.$h1;
+}
+
+h3 {
+  color: tokens.$white;
+  font-size: tokens.$h3;
+  font-weight: bold;
+  line-height: 1.25;
 }
 
 p {
   font-size: tokens.$copy;
+  line-height: 1.25;
 }
