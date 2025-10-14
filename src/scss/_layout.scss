@@ -3,8 +3,30 @@
 -- LAYOUT
 --
 */
+
+/*
+-- _includes
+*/
+@use "tokens";
+
+/*------------------------------*/
+
 .page {
+  padding: tokens.$medium;
   margin: auto;
-  max-width: 1100px;
+  max-width: tokens.$desktop;
   width: 100%;
+
+  > * + * {
+    margin-top: tokens.$medium;
+  }
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .page {
+    padding: 0;
+  }
 }

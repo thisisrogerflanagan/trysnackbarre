@@ -1,0 +1,81 @@
+/*
+--
+-- INTRODUCTION
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+
+.introduction {
+  position: relative;
+
+  > img {
+    @include mixins.responsive-image;
+  }
+}
+
+.mac__privacy {
+  display: none;
+  position: absolute;
+  left: 14rem;
+  top: 11rem;
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 0;
+    border-radius: tokens.$medium;
+    padding: tokens.$small;
+    position: relative;
+    height: 50px;
+    width: 50px;
+
+    > img {
+      @include mixins.responsive-image;
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 2;
+    }
+
+    &:hover {
+      .mac__privacy__img {
+        transform: scale(0);
+      }
+
+      .mac__privacy__img-hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.mac__privacy__img {
+  transform: scale(1);
+}
+
+.mac__privacy__img-hover {
+  transform: scale(0);
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .mac__privacy {
+    display: block;
+  }
+}
