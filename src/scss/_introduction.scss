@@ -23,6 +23,21 @@
   align-items: center;
   gap: tokens.$xxlarge;
 
+  h1 b {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: tokens.$highlighter;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      height: 20px;
+      z-index: -1;
+    }
+  }
+
   > p {
     max-width: 638px;
     margin: auto;
