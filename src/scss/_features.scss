@@ -73,6 +73,12 @@
   content: "💼";
 }
 
+.features__download {
+  margin-top: calc(tokens.$xxxlarge * 2);
+  display: flex;
+  justify-content: center;
+}
+
 /*
 -- _responsive
 */
