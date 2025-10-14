@@ -14,6 +14,7 @@
 .spotlight {
   border-radius: tokens.$xxlarge;
   display: flex;
+  flex-direction: column;
   align-items: anchor-center;
   justify-content: space-between;
 
@@ -25,9 +26,11 @@
 .spotlight__media {
   max-width: 500px;
   width: 100%;
+  order: 2;
 }
 
 .spotlight__details {
+  order: 1;
   padding: tokens.$xxlarge;
 
   > * + * {
@@ -49,4 +52,21 @@
 
 .spotlight--four {
   background-color: tokens.$cherry;
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .spotlight {
+    flex-direction: row;
+  }
+
+  .spotlight__media {
+    order: 2;
+  }
+
+  .spotlight__details {
+    order: 1;
+  }
 }
