@@ -1,4 +1,10 @@
 /*
+--
+-- TOKENS
+--
+*/
+
+/*
 -- Typography
 */
 $h1: 6.4rem;
@@ -11,7 +17,7 @@ $copy: 2rem;
 /*
 -- Colors
 */
-$twilight: rgba(FDF8B4, 0.15);
+$twilight: rgba(#fdf8b4, 0.15);
 $black: #222;
 $white: #fff;
 $highlighter: #fdf8b4;
@@ -19,3 +25,19 @@ $goldenrod: #feb000;
 $merlot: #83180f;
 $pumpkin: #ff8c04;
 $cherry: #dc1c06;
+
+/*
+-- Spacing
+*/
+$xsmall: 0.4rem;
+$small: 0.8rem;
+$medium: 1.2rem;
+$large: 1.6rem;
+$xlarge: 2rem;
+$xxlarge: 3.6rem;
+$xxxlarge: 4.4rem;
+
+/*
+-- Layout
+*/
+$desktop: 1100px;

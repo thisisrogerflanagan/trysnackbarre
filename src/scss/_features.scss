@@ -1,0 +1,108 @@
+/*
+--
+-- FEATURES
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+
+.features {
+  margin-top: calc(tokens.$xxlarge * 3);
+
+  h2,
+  h5 {
+    margin-bottom: tokens.$xlarge;
+  }
+
+  > ul {
+    margin: calc(tokens.$xxlarge * 3) auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: tokens.$xxlarge;
+    width: 100%;
+    max-width: 410px;
+
+    > li {
+      &:before {
+        display: block;
+        font-size: tokens.$h3;
+      }
+
+      > ul {
+        margin-top: tokens.$xlarge;
+
+        b {
+          display: inline-block;
+          font-weight: bold;
+        }
+
+        span {
+          background-color: tokens.$highlighter;
+          display: inline-block;
+        }
+
+        li + li {
+          margin-top: tokens.$medium;
+        }
+      }
+    }
+  }
+}
+
+.features__one:before {
+  content: "✨";
+}
+
+.features__two:before {
+  content: "✈️";
+}
+
+.features__three:before {
+  content: "🛒";
+}
+
+.features__four:before {
+  content: "💼";
+}
+
+.features__download {
+  margin-top: calc(tokens.$xxxlarge * 2);
+  display: flex;
+  justify-content: center;
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .features {
+    > ul {
+      row-gap: tokens.$xxlarge;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      max-width: 100%;
+
+      > li {
+        width: 48%;
+        position: relative;
+        padding-left: 50px;
+
+        &:before {
+          position: absolute;
+          left: -10px;
+          top: -10px;
+        }
+      }
+    }
+  }
+}

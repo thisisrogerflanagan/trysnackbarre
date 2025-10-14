@@ -1,0 +1,64 @@
+/*
+--
+-- SPOTLIGHT
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+.spotlight {
+  border-radius: tokens.$xxlarge;
+  display: flex;
+  flex-direction: column;
+  align-items: anchor-center;
+  justify-content: space-between;
+
+  p {
+    color: tokens.$white;
+  }
+}
+
+.spotlight__media {
+  max-width: 500px;
+  width: 100%;
+  order: 2;
+}
+
+.spotlight__details {
+  order: 1;
+  padding: tokens.$xxlarge;
+
+  > * + * {
+    margin-top: tokens.$xlarge;
+  }
+}
+
+.spotlight--one {
+  background-color: tokens.$goldenrod;
+}
+
+.spotlight--two {
+  background-color: tokens.$merlot;
+}
+
+.spotlight--three {
+  background-color: tokens.$goldenrod;
+}
+
+.spotlight--four {
+  background-color: tokens.$cherry;
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .spotlight {
+    flex-direction: row;
+  }
+}

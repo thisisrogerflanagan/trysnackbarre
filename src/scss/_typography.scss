@@ -1,0 +1,66 @@
+/*
+--
+-- TYPOGRAPHY
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "font-face";
+
+/*------------------------------*/
+
+h1 {
+  @include font-face.GT;
+  color: tokens.$black;
+  font-size: tokens.$h1;
+}
+
+h2 {
+  color: tokens.$black;
+  font-size: tokens.$h2;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  color: tokens.$white;
+  font-size: tokens.$h3;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h4 {
+  color: tokens.$black;
+  font-size: tokens.$h4;
+  font-weight: bold;
+}
+
+h5 {
+  color: tokens.$black;
+  font-size: tokens.$h5;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    background: url("/assets/img/classified.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 50px;
+    transform: translateY(-50%);
+  }
+}
+
+p,
+li {
+  font-size: tokens.$copy;
+  line-height: 1.25;
+}

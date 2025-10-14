@@ -1,0 +1,52 @@
+/*
+--
+-- INTRODUCTION
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+
+.introduction {
+  text-align: center;
+  max-width: 755px;
+  margin: 0 auto calc(tokens.$xxlarge * 3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: tokens.$xxlarge;
+
+  h1 b {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: tokens.$highlighter;
+      left: 0;
+      right: 0;
+      bottom: 5px;
+      height: 20px;
+      z-index: -1;
+    }
+  }
+
+  > p {
+    max-width: 638px;
+    margin: auto;
+    line-height: 1.25;
+  }
+}
+
+.ios-icon {
+  max-width: 100px;
+  width: 100%;
+  margin-bottom: tokens.$xlarge;
+}

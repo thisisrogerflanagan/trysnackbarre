@@ -1,0 +1,32 @@
+/*
+--
+-- LAYOUT
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+
+/*------------------------------*/
+
+.page {
+  padding: tokens.$xlarge;
+  margin: auto;
+  max-width: tokens.$desktop;
+  width: 100%;
+
+  > * + * {
+    margin-top: tokens.$xxxlarge;
+  }
+}
+
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .page {
+    padding: 0;
+  }
+}
