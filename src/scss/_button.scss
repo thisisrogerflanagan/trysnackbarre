@@ -1,0 +1,44 @@
+/*
+--
+-- Button
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+
+/*------------------------------*/
+.button {
+  border-radius: tokens.$large;
+  background: tokens.$black;
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: tokens.$highlighter;
+  font-size: 20px;
+  min-width: 180px;
+  padding: tokens.$xlarge tokens.$xxlarge;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7), box-shadow 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7), filter 0.3s cubic-bezier(0.5, 2.5, 0.7, 0.7);
+
+  &:hover {
+    background: tokens.$pumpkin;
+    box-shadow: 0 0 0 1px tokens.$black, 0 5px 0 0 tokens.$black;
+    transform: translateY(-5px);
+    color: tokens.$black;
+  }
+}
+
+@media (max-width: 499px) {
+  .button,
+  button {
+    display: block;
+    width: 100%;
+  }
+}

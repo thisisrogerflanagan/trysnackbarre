@@ -9,107 +9,29 @@
 */
 @use "tokens";
 @use "mixins";
-@use "animation";
 
 /*------------------------------*/
 
 .introduction {
-  background-image: url("/assets/img/background/hero.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
+  max-width: 755px;
+  margin: 0 auto calc(tokens.$xxlarge * 3);
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  border-radius: tokens.$xxlarge;
-}
+  align-items: center;
+  gap: tokens.$xxlarge;
 
-.lock-screen {
-  position: relative;
-  width: 88%;
-  margin: auto;
-  max-width: 960px;
-
-  > img {
-    @include mixins.responsive-image;
+  > p {
+    max-width: 638px;
+    margin: auto;
+    line-height: 1.25;
   }
 }
 
-.mac__privacy {
-  position: absolute;
-  left: 12%;
-  top: 16%;
+.ios-icon {
+  max-width: 100px;
   width: 100%;
-  height: auto;
-
-  a {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 0;
-    border-radius: tokens.$medium;
-    padding: tokens.$small;
-    position: relative;
-
-    > img {
-      @include mixins.responsive-image;
-      position: absolute;
-      transition: all 0.5s ease;
-      z-index: 2;
-    }
-  }
-}
-
-.mac__privacy__img {
-  transform: scale(0);
-}
-
-.mac__privacy__img-hover {
-  transform: scale(1);
-}
-
-.classified {
-  position: absolute;
-  left: 0;
-  bottom: 10%;
-  width: 100%;
-
-  > svg {
-    animation: draw 0.8s ease-in forwards;
-    @include mixins.responsive-image;
-    transition: all 0.5s;
-    width: 50%;
-    height: auto;
-  }
-}
-
-/*
--- _responsive
-*/
-@media (min-width: tokens.$desktop) {
-  .mac__privacy a {
-    &:hover {
-      .mac__privacy__img {
-        transform: scale(0);
-      }
-
-      .mac__privacy__img-hover {
-        transform: scale(1);
-      }
-    }
-  }
-
-  .mac__privacy__img {
-    transform: scale(1);
-  }
-
-  .mac__privacy__img-hover {
-    transform: scale(0);
-  }
-
-  .lock-screen {
-    width: 100%;
-  }
+  margin-bottom: tokens.$xlarge;
 }

@@ -1,0 +1,22 @@
+/*
+--
+-- TYPOGRAPHY
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "font-face";
+
+/*------------------------------*/
+
+h1 {
+  @include font-face.GT;
+  font-size: tokens.$h1;
+}
+
+p {
+  font-size: tokens.$copy;
+}
