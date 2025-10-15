@@ -13,15 +13,7 @@
 /*------------------------------*/
 
 .introduction {
-  text-align: center;
-  max-width: 755px;
   margin: 0 auto calc(tokens.$xxlarge * 3);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: tokens.$xxlarge;
 
   h1 b {
     position: relative;

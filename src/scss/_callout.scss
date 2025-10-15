@@ -1,0 +1,24 @@
+/*
+--
+-- CALLOUT
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+.callout {
+  text-align: center;
+  max-width: 755px;
+  margin: calc(tokens.$xxxlarge * 3) auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: tokens.$xxlarge;
+}
