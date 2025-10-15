@@ -17,6 +17,10 @@
   max-width: tokens.$desktop;
   width: 100%;
 
+  &.sub {
+    max-width: 768px;
+  }
+
   > * + * {
     margin-top: tokens.$xxxlarge;
   }

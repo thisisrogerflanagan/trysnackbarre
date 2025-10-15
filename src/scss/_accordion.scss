@@ -1,0 +1,44 @@
+/*
+--
+-- ACCORDION
+--
+*/
+
+/*
+-- _includes
+*/
+@use "tokens";
+@use "mixins";
+
+/*------------------------------*/
+.accordion-header {
+  font-weight: bold;
+  padding: tokens.$xlarge 0;
+  cursor: pointer;
+
+  &:before {
+    background: url("/assets/img/icons/plus.svg") no-repeat;
+    background-size: contain;
+    content: "";
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    margin-right: tokens.$medium;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &.active:before {
+    background: url("/assets/img/icons/minus.svg") no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+  }
+}
+
+.accordion-section {
+  border-bottom: 1px solid rgba(tokens.$pumpkin, 0.5);
+}
+
+.accordion-content {
+  display: none; /* Initially hide content */
+  padding: 0 0 tokens.$xlarge calc(tokens.$medium + 14px);
+}

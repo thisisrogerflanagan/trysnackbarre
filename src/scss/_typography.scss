@@ -59,8 +59,26 @@ h5 {
   }
 }
 
+h6,
 p,
 li {
+  color: tokens.$black;
   font-size: tokens.$copy;
   line-height: 1.25;
+}
+
+h6 {
+  font-weight: bold;
+  line-height: 2;
+}
+
+p a {
+  color: tokens.$black;
+  text-decoration: none;
+  border-bottom: 2px solid tokens.$pumpkin;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    color: tokens.$pumpkin;
+  }
 }
