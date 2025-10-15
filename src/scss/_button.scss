@@ -35,6 +35,16 @@
   }
 }
 
+/*
+-- _responsive
+*/
+@media (min-width: tokens.$desktop) {
+  .button:hover + .overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 499px) {
   .button,
   button {
