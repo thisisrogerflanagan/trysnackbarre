@@ -5,6 +5,14 @@
 */
 @use "tokens";
 
+::selection {
+  background-color: tokens.$highlighter;
+}
+
+::-moz-selection {
+  background-color: tokens.$highlighter;
+}
+
 html,
 body,
 div,
