@@ -12,13 +12,21 @@
 
 /*------------------------------*/
 
-.page {
+
   footer {
-    padding: tokens.$large 0;
+    padding: tokens.$xlarge;
+      margin: auto;
+      max-width: tokens.$desktop;
+      width: 100%;
     position: relative;
     margin-top: calc(tokens.$xxlarge * 6);
   }
-}
+
+  .sub + footer {
+      margin-top: 0;
+      max-width: 768px;
+  }
+
 
 nav {
   display: flex;
@@ -66,6 +74,10 @@ nav {
 -- _responsive
 */
 @media (min-width: tokens.$desktop) {
+  .sub + footer {
+    padding: tokens.$large 0;
+  }
+
   nav {
     justify-content: space-between;
     flex-direction: row;

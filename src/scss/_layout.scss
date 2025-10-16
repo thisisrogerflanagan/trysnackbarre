@@ -32,5 +32,9 @@
 @media (min-width: tokens.$desktop) {
   .page {
     padding: 0;
+
+    &.sub {
+      min-height: calc(100vh - 158px);
+    }
   }
 }

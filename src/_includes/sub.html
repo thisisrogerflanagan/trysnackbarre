@@ -9,7 +9,8 @@
   <body class="{{ webpage }}">
     <div class="site">
       {% include "header.html" %}
-      <div class="page sub">{{ content | safe }} {% include "callout.html" %} {% include "footer.html" %}</div>
+      <div class="page sub">{{ content | safe }}</div>
+      {% include "footer.html" %}
     </div>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
