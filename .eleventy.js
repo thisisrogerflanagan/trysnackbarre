@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/fonts");
-  eleventyConfig.addPassthroughCopy("src/audio");
+  eleventyConfig.addPassthroughCopy("src/pdf");
   eleventyConfig.addPassthroughCopy("src/assets"); // for favicon, og images, etc.
 
   eleventyConfig.addShortcode("svg", function (filename) {

@@ -15,7 +15,7 @@
 .overlay {
   background: tokens.$white;
   border-radius: tokens.$xxxlarge;
-  padding: tokens.$xxlarge;
+  padding: tokens.$xlarge;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 20%;
@@ -23,4 +23,9 @@
   opacity: 0;
   transform: translateY(5%);
   pointer-events: none;
+
+  > img {
+    @include mixins.responsive-image;
+    width: 300px;
+  }
 }
